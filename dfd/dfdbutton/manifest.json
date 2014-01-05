@@ -1,0 +1,16 @@
+{
+  "name": "de.thefreedictionary.com",
+  "version": "1.0",
+  "background_page": "content/background.html",
+  "description": "de.thefreedictionary.com",
+  "browser_action": {
+    "default_icon": "icons/fd.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content/selection_service.js"]
+    }
+  ],
+  "permissions": ["http://de.thefreedictionary.com/", "tabs"]
+}

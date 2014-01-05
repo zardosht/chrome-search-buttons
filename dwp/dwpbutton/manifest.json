@@ -1,0 +1,16 @@
+{
+  "name": "wikipedia.com-DE",
+  "version": "1.0",
+  "background_page": "content/background.html",
+  "description": "de.wikipedia.com",
+  "browser_action": {
+    "default_icon": "icons/wp.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content/selection_service.js"]
+    }
+  ],
+  "permissions": ["http://de.wikipedia.com/", "tabs"]
+}
