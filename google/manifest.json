@@ -11,7 +11,7 @@
     "persistent": false
   },
  
-  "description": "google.com",
+  "description": "This extension adds a button to toolbar. If you highlight a text in the page and press the button, the highlighted term is searched in Google in a new tab.",
  
   "browser_action": {
     "default_icon": "icons/google.png"
