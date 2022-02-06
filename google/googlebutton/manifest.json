@@ -1,1 +1,29 @@
-    {"manifest_version": 2,"name": "MySearchButton","version": "1.0","background": {"scripts": ["content/background.js"],"persistent": false},"description": "searches Google for the selected text in current page.","browser_action": {"default_icon": "icons/google.png"},"content_scripts": [{"matches": ["http://*/*", "https://*/*"],"js": ["content/selection_service.js"]}],"permissions": ["http://google.com/", "https://google.com/", "tabs",  "activeTab"]}
+{
+  "manifest_version": 3,
+  "name": "GoogleSearchButton",
+  "version": "1.1",
+  "background": { 
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "/icons/google16.png",
+    "32": "/icons/google32.png",
+    "48": "/icons/google128.png",
+    "128": "/icons/google128.png"
+  },
+  "description": "Searches Google in a new tab for the selected text in current page.",
+  "action": { 
+    "default_icon": {
+        "16": "/icons/google16.png",
+        "32": "/icons/google32.png",
+        "48": "/icons/google128.png",
+        "128": "/icons/google128.png"
+    },
+    "default_title": "Select a text and press this button to search for it in Google in a new tab."
+  },
+  "permissions": [
+    "scripting",  
+    "activeTab",
+    "storage"
+  ]
+}
