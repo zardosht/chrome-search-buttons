@@ -5,9 +5,6 @@ chrome.action.onClicked.addListener((tab) => {
       target: {tabId: tab.id},
       files: ['content.js']
     });
-    chrome.tabs.sendMessage(tab.id, {method: "getSelection"}, function(response){
-      searchGoogle(response.data);
-    });
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, responseCallback) {
